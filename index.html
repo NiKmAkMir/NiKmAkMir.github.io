@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Main Page</title>
 </head>
 <body>
     <ul>
     <li>1. <a href="http://www.kubsu.ru/index.php">KubSU</a></li>
     <li>2. <a href="https://www.kubsu.ru/index.php">KubSU</a></li>
-    <li>3. <a href="https://www.kubsu.ru/index.php"><img src="static/image.jpg"></a></li>
-    <li>4. <a href="kubsu.ru/ru/timetable"></a></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li id="image">3. <a href="https://www.kubsu.ru/index.php"><img src="static/image.jpg"></a></li>
+    <li>4. <a href="inner.html">Inner Page</a></li>
+    <li>5. <a href="index.html">Main Page</a></li>
+    <li>6. <a href="#image">Link to Image</a></li>
+    <li>7. <a href="https://www.kubsu.ru/ru/timetable" title="KubSU Timetable" rel="nofollow">KubSU Timetable</a></li>
     <li></li>
     <li></li>
     <li></li>
@@ -29,5 +29,16 @@
     <li></li>
     <li></li>
 </ul>
+
+
+<style>
+    img {
+        max-width: 200px;
+        max-height: 200px;
+    }
+    li {
+        margin-bottom: 15px;
+    }
+</style>
 </body>
 </html>
