@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
     <ul>
     <li>1. <a href="http://www.kubsu.ru/index.php">KubSU</a></li>
     <li>2. <a href="https://www.kubsu.ru/index.php">KubSU</a></li>
-    <li id="image">3. <a href="https://www.kubsu.ru/index.php"><img src="static/image.jpg"></a></li>
+    <li id="image">3. <a href="https://www.kubsu.ru/index.php"><img src="{% static 'image.jpg' %}"></a></li>
     <li>4. <a href="inner.html">Inner Page</a></li>
     <li>5. <a href="index.html">Main Page</a></li>
     <li>6. <a href="#image">Link to Image</a></li>
