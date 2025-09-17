@@ -7,6 +7,8 @@
         <title>Main Page</title>
     </head>
     <body>
+        <h2>Links</h2>
+
         <ol type="1">
             <li><a href="http://www.kubsu.ru/index.php">KubSU</a></li>
             <li><a href="https://www.kubsu.ru/index.php">KubSU</a></li>
@@ -22,16 +24,34 @@
             <li><a href="../../bit">Link on ../../bit</a></li>
             <li><p>This <a href="https://www.kubsu.ru/index.php">link</a> to KubSU</p></li>
             <li><a href="https://www.kubsu.ru/index.php#section-footer">This link to KubSU footer</a></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>
+                <img src="{% static 'image.jpg' %}" usemap="#map-rect-circle">
+                <map name="map-rect-circle">
+                    <area shape="rect" coords="0, 0, 100, 150" href="https://www.kubsu.ru/index.php">
+                    <area shape="circle" coords="57, 43, 30" href="https://www.kubsu.ru/index.php">
+                </map>
+            </li>
+            <li><a href="">Link to Nothing</a></li>
+            <li><a>Link without href</a></li>
+            <li><a href="https://www.kubsu.ru/index.ph" rel="nofollow">No follow link</a></li>
+            <li><a href="https://www.kubsu.ru/index.php" rel="noindex">No index link</a></li>
+            <li>
+                <ol>
+                    <li><a href="" title="First Link">First Link</a></li>
+                    <li><a href="" title="Second Link">Second Link</a></li>
+                    <li><a href="" title="Third Link">Third Link</a></li>
+                </ol>
+            </li>
+            <li><a href="ftp://user:pass123@something.ru/tmp/text.txt">FTP link</a></li>
         </ol>
 
+        <h2>Form</h2>
 
+        <div><label for=""></label><input type="text"></div>
+        <div><label for=""></label><input type="text"></div>
+        <div><label for=""></label><input type="text"></div>
+        <div><label for=""></label><input type="text"></div>
+        <div><label for=""></label><input type="text"></div>
         <style>
             img {
                 max-width: 200px;
