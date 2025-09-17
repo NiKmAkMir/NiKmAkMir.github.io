@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,9 +11,9 @@
         <ol type="1">
             <li><a href="http://www.kubsu.ru/index.php">KubSU</a></li>
             <li><a href="https://www.kubsu.ru/index.php">KubSU</a></li>
-            <li id="image"><a href="https://www.kubsu.ru/index.php"><img src="{% static 'image.jpg' %}"></a></li>
-            <li><a href="{% url 'inner_page' %}">Inner Page</a></li>
-            <li><a href="{% url 'index_page' %}">Main Page</a></li>
+            <li id="image"><a href="https://www.kubsu.ru/index.php"><img src="image.jpg"></a></li>
+            <li><a href="inner_page">Inner Page</a></li>
+            <li><a href="index_page">Main Page</a></li>
             <li><a href="#image">Link to Image</a></li>
             <li><a href="https://www.kubsu.ru/ru/timetable?page=1&name=student&id=453">KubSU Timetable</a></li>
             <li><a href="https://www.kubsu.ru/ru/timetable?id=453">KubSU Timetable</a></li>
@@ -25,7 +24,7 @@
             <li><p>This <a href="https://www.kubsu.ru/index.php">link</a> to KubSU</p></li>
             <li><a href="https://www.kubsu.ru/index.php#section-footer">This link to KubSU footer</a></li>
             <li>
-                <img src="{% static 'image.jpg' %}" usemap="#map-rect-circle">
+                <img src="image.jpg" usemap="#map-rect-circle">
                 <map name="map-rect-circle">
                     <area shape="rect" coords="0, 0, 100, 150" href="https://www.kubsu.ru/index.php">
                     <area shape="circle" coords="57, 43, 30" href="https://www.kubsu.ru/index.php">
