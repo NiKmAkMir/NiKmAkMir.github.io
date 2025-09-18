@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+
+    <style>
+        img {
+            max-width: 200px;
+            max-height: 200px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        .form-field {
+            margin-left: 20px;
+            margin-bottom: 25px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>Links</h2>
+
+    <ul>
+        <li><a href="http://www.kubsu.ru/index.php">KubSU</a></li>
+        <li><a href="https://www.kubsu.ru/index.php">KubSU</a></li>
+        <li id="image"><a href="https://www.kubsu.ru/index.php"><img src="../static/image.jpg" alt="Flower"></a></li>
+        <li><a href="inner.html">Inner Page</a></li>
+        <li><a href="index.html">Main Page</a></li>
+        <li><a href="#image">Link to Image</a></li>
+        <li><a href="https://www.kubsu.ru/ru/timetable?page=1&name=student&id=453">KubSU Timetable</a></li>
+        <li><a href="https://www.kubsu.ru/ru/timetable?id=453">KubSU Timetable</a></li>
+        <li><a href="inner.html">Link on Inner Page</a></li>
+        <li><a href="about/something.html">Link on about/something</a></li>
+        <li><a href="../byte.html">Link on ../byte</a></li>
+        <li><a href="../../bit.html">Link on ../../bit</a></li>
+        <li>
+            <p>This <a href="https://www.kubsu.ru/index.php">link</a> to KubSU</p>
+        </li>
+        <li><a href="https://www.kubsu.ru/index.php#section-footer">This link to KubSU footer</a></li>
+        <li>
+            <img src="../static/image.jpg" usemap="#map-rect-circle" alt="Flower">
+            <map name="map-rect-circle">
+                <area shape="rect" coords="27,62,229,161" href="https://www.kubsu.ru/index.php" alt="Flower">
+                <area shape="circle" coords="75,75,75" href="https://www.kubsu.ru/index.php" alt="Flower">
+            </map>
+        </li>
+        <li><a href="">Link to Nothing</a></li>
+        <li><a>Link without href</a></li>
+        <li><a href="https://www.kubsu.ru/index.ph" rel="nofollow">No follow link</a></li>
+        <li>
+            <!--noindex-->
+            <a href="https://www.kubsu.ru/index.php">No index link</a>
+            <!--/noindex-->
+        </li>
+        <li>
+            <ol>
+                <li><a href="" title="First Link">First Link</a></li>
+                <li><a href="" title="Second Link">Second Link</a></li>
+                <li><a href="" title="Third Link">Third Link</a></li>
+            </ol>
+        </li>
+        <li><a href="ftp://user:pass123@something.ru/tmp/text.txt">FTP link</a></li>
+    </ul>
+
+    <h2>Form</h2>
+    <form action="registration">
+        <div class="form-field">
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-field">
+            <label for="phone">Phone number: </label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-field">
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-field">
+            <label for="birthday">Birthday: </label>
+            <input type="date" id="birthday" name="birthday" required>
+        </div>
+        <div class="form-field">
+            <input type="radio" name="gender" value="male" id="male">
+            <label for="male">Male</label>
+
+            <input type="radio" name="gender" value="female" id="female">
+            <label for="female">Female</label>
+        </div>
+        <div class="form-field">
+            <label for="language">Choose favorite language: </label>
+            <select name="language" id="language">
+                <option value="pascal">Pascal</option>
+                <option value="c">C</option>
+                <option value="cpp">C++</option>
+                <option value="js">JavaScript</option>
+                <option value="php">PHP</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="haskel">Haskel</option>
+                <option value="clojure">Clojure</option>
+                <option value="prolog">Prolog</option>
+                <option value="scala">Scala</option>
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="message">Biography: </label>
+            <textarea name="message" id="message" rows="5" cols="40" placeholder="Type here..."></textarea>
+        </div>
+        <div class="form-field">
+            <input type="checkbox" name="agree" id="agree">
+            <label for="agree">I have read the contract</label>
+        </div>
+
+        <button class="form-field" type="submit">Submit</button>
+
+    </form>
+
+
+
+</body>
+
+</html>
