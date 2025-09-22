@@ -2,7 +2,6 @@ html,
 body {
     margin: 0;
     background-color: rgb(216, 208, 207);
-    width: 100vw;
     font-size: 18px;
 }
 
@@ -13,18 +12,18 @@ html * {
 
 .container {
     max-width: 960px;
-    width: 80%;
-    margin: 0 10%;
+    margin: auto;
+    padding: 0 15px;
 }
 
-.img-links {
-    max-width: 200px;
-    max-height: 200px;
+.container-header,
+.container-footer {
+    max-width: 1060px;
+    margin: auto;
+    padding: 0 15px;
 }
 
-li {
-    margin-bottom: 15px;
-}
+/* Header */
 
 header {
     position: sticky;
@@ -109,8 +108,88 @@ nav a:hover {
     display: block;
 }
 
+/* Links */
+
+.img-links {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+ul li {
+    margin-bottom: 15px;
+    list-style-type: "🔥 ";
+}
+
+ol li {
+    margin-bottom: 15px;
+    list-style-type: decimal;
+}
+
+/* Table */
+.table {
+    width: 100%;
+    border: none;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.table thead th {
+    font-weight: bold;
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    background: olive;
+    font-size: 14px;
+}
+
+.table thead tr th:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.table thead tr th:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+.table tbody td {
+    text-align: left;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.table tbody tr:nth-child(odd) {
+    background: orange;
+}
+
+.table tbody tr:nth-child(even) {
+    background: tomato;
+}
+
+.table tbody tr td:first-child {
+    border-radius: 8px 0 0 8px;
+}
+
+.table tbody tr td:last-child {
+    border-radius: 0 8px 8px 0;
+}
+
+/* Form */
 
 .form-field {
     margin-left: 20px;
     margin-bottom: 25px;
+}
+
+/* Footer */
+
+footer {
+    height: 60px;
+    background-color: #cfaa71;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
