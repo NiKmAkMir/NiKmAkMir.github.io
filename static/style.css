@@ -1,25 +1,21 @@
 html,
 body {
-    margin: 0;
     background-color: rgb(216, 208, 207);
-    font-size: 18px;
-}
-
-html * {
     font-family: 'Times New Roman', Times, serif;
-
+    font-size: 18px;
+    margin: 0;
 }
 
 .container {
-    max-width: 960px;
     margin: auto;
+    max-width: 960px;
     padding: 0 15px;
 }
 
 .container-header,
 .container-footer {
-    max-width: 1060px;
     margin: auto;
+    max-width: 1060px;
     padding: 0 15px;
 }
 
