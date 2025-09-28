@@ -15,13 +15,33 @@ body {
 .container-header,
 .container-footer {
     margin: auto;
-    max-width: 1060px;
+    max-width: 1200px;
     padding: 0 15px;
 }
 
+.content-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 12px;
+}
+
+.links-wrapper {
+    order: 2;
+}
+
+.table-wrapper {
+    order: 1;
+}
+
+@media (min-width: 768px) {
+    .links-wrapper,
+    .table-wrapper {
+        order: 0;
+    }
+}
+
 /* Header */
-
-
 
 header {
     position: static;
@@ -150,7 +170,7 @@ nav a:hover {
     background-color: #ddd;
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
     .dropdown {
         position: relative;
         display: inline-block;
@@ -164,7 +184,7 @@ nav a:hover {
         max-height: none;
         display: none;
         background: #f1f1f1;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
 
     .dropdown:hover .dropdown-content {
@@ -190,11 +210,27 @@ ol li {
 }
 
 /* Table */
+
 .table {
-    max-width: 90%;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    word-wrap: break-word;
+    max-width: 100%;
+
     border: none;
-    margin-bottom: 20px;
     color: #FFFFFF;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table th,
+.table td {
+    white-space: normal;
+    word-break: break-word;
 }
 
 .table thead th {
@@ -251,6 +287,7 @@ form textarea {
     border: 1px solid #aaa;
     padding: 5px;
     border-radius: 5px;
+    max-width: 90%;
 }
 
 form button {
