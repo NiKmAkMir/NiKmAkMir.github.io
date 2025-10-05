@@ -1,12 +1,12 @@
+// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/lab4/',              
+  base: '/lab4/',       
   build: {
-    outDir: path.resolve(__dirname, '../../lab4/'),
+    outDir: 'dist',     
     emptyOutDir: true
   }
 })
