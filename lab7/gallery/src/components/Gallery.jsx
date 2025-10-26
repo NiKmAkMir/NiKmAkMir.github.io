@@ -3,16 +3,17 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-// Загружаем картинки из папки /public/images/
+const base = import.meta.env.BASE_URL
+
 const IMAGES = [
-    '/images/img1.jpeg',
-    '/images/img2.jpg',
-    '/images/img3.jpg',
-    '/images/img4.jpg',
-    '/images/img5.jpg',
-    '/images/img6.jpg',
-    '/images/img7.jpg',
-    '/images/img8.jpg',
+    `${base}images/img1.jpeg`,
+    `${base}images/img2.jpg`,
+    `${base}images/img3.jpg`,
+    `${base}images/img4.jpg`,
+    `${base}images/img5.jpg`,
+    `${base}images/img6.jpg`,
+    `${base}images/img7.jpg`,
+    `${base}images/img8.jpg`,
 ]
 
 function Arrow({ onClick, direction }) {
@@ -92,7 +93,6 @@ export default function Gallery() {
             { breakpoint: 640, settings: { slidesToShow: 1, slidesToScroll: 1 } },
         ],
     }
-
 
     function goToPage(page) {
         const index = (page - 1) * slidesToShow
