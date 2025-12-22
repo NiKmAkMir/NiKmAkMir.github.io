@@ -138,7 +138,7 @@ a {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 var(--spacing-lg);
+  padding: 0 130px;
 }
 
 /* Section Spacing */

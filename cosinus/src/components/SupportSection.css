@@ -1,24 +1,27 @@
 .support {
-  background-color: var(--color-light-bg);
+  background-color: var(--color-white);
 }
 
 .support-title {
   text-align: center;
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: 56px;
 }
 
 .support-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--spacing-md);
+  gap: 24px;
+  row-gap: 24px;
 }
 
 .support-card {
   position: relative;
-  padding: var(--spacing-lg);
+  padding: 27px;
   min-height: 292px;
   display: flex;
   flex-direction: column;
+  background: var(--color-white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .support-number {

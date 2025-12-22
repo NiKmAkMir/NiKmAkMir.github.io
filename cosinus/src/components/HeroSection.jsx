@@ -45,18 +45,40 @@ const HeroSection = () => {
         </div>
         
         <div className="hero-stats">
-          {stats.map((stat, index) => (
-            <div key={index} className="stat-item">
-              {stat.icon && (
-                <img src={stat.icon} alt="" className="stat-icon" />
-              )}
-              <div className="stat-value">{stat.value}</div>
-              <div className="stat-label">{stat.label}</div>
-              {index < stats.length - 1 && (
-                <div className="stat-divider"></div>
-              )}
-            </div>
-          ))}
+          <div className="stat-item">
+            {stats[0].icon && (
+              <img src={stats[0].icon} alt="" className="stat-icon" />
+            )}
+            <div className="stat-value">{stats[0].value}</div>
+            <div className="stat-label">{stats[0].label}</div>
+            <div className="stat-divider"></div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-value">{stats[1].value}</div>
+            <div className="stat-label">{stats[1].label}</div>
+            <div className="stat-divider"></div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-value">{stats[2].value}</div>
+            <div className="stat-label">{stats[2].label}</div>
+          </div>
+        </div>
+        
+        <div className="hero-stats hero-stats-second">
+          <div className="stat-item">
+            <div className="stat-value">{stats[3].value}</div>
+            <div className="stat-label">{stats[3].label}</div>
+            <div className="stat-divider"></div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-value">{stats[4].value}</div>
+            <div className="stat-label">{stats[4].label}</div>
+            <div className="stat-divider"></div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-value">{stats[5].value}</div>
+            <div className="stat-label">{stats[5].label}</div>
+          </div>
         </div>
       </div>
     </section>
