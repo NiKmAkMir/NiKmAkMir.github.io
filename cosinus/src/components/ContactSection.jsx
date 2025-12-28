@@ -10,17 +10,18 @@ const ContactSection = () => {
             <h2 className="heading-secondary contact-title">
               Оставить заявку на<br />поддержку сайта
             </h2>
+            <img src="/images/d-flying-logo.svg" alt="" className="contact-logo1" />
             <p className="contact-description">
               Срочно нужна поддержка сайта? Ваша команда не успевает справиться самостоятельно или предыдущий подрядчик не справился с работой? Тогда вам точно к нам! Просто оставьте заявку и наш менеджер с вами свяжется!
             </p>
             
             <div className="contact-info">
               <div className="contact-info-item">
-                <img src="/icons/phone-icon.svg" alt="" className="contact-icon" />
+                <img src="icons/phone.svg" alt="" className="contact-icon" />
                 <a href="tel:88002222673" className="contact-phone">8 800 222-26-73</a>
               </div>
               <div className="contact-info-item">
-                <img src="/icons/email-icon.svg" alt="" className="contact-icon" />
+                <img src="/icons/mail.svg" alt="" className="contact-icon2" />
                 <a href="mailto:info@drupal-coder.ru" className="contact-email">info@drupal-coder.ru</a>
               </div>
             </div>
