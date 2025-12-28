@@ -12,7 +12,6 @@ export default function HeroSection() {
 
       <div className="container hero__content">
 
-        {/* LEFT */}
         <div className="hero__left">
           <h1>
             Поддержка сайтов<br />на Drupal
@@ -27,14 +26,15 @@ export default function HeroSection() {
           <a href="#pricing" className="hero__button">Тарифы</a>
         </div>
 
-        {/* RIGHT */}
         <div className="hero__stats">
 
           <div className="stat stat--main">
-            <b>#1</b>
-            <img src="/images/trophy-icon.png" alt="" />
-            
-            <span>
+            <div className="stat__top-row">
+              <b>#1</b>
+              <img src="/images/trophy-icon.png" alt="" />
+            </div>
+                      
+            <span style={{ marginTop: '-15px' }}>
               Drupal-разработчик<br />
               в России по версии<br />
               Рейтинга Рунета
