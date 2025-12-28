@@ -1,88 +1,88 @@
 import './HeroSection.css';
 
-const HeroSection = () => {
-  const stats = [
-    {
-      icon: '/images/trophy-icon.png',
-      value: '#1',
-      label: 'Drupal-разработчик\nв России по версии\nРейтинга Рунета'
-    },
-    {
-      value: '3+',
-      label: 'средний опыт\nспециалистов более\n3 лет'
-    },
-    {
-      value: '14',
-      label: 'лет опыта в сфере\nDrupal'
-    },
-    {
-      value: '200+',
-      label: 'модулей и тем\nв формате DrupalGive'
-    },
-    {
-      value: '35 000',
-      label: 'часов поддержки\nсайтов на Drupal'
-    },
-    {
-      value: '200+',
-      label: 'Проектов\nна поддержке'
-    }
-  ];
-
+export default function HeroSection() {
   return (
     <section className="hero">
-      <div className="hero-background"></div>
-      <div className="container">
-        <div className="hero-content">
-          <h1 className="hero-title">
-            Поддержка<br />сайтов на Drupal
+
+      <video className="hero__video" autoPlay muted loop playsInline>
+        <source src="/video.mp4" type="video/mp4" />
+      </video>
+
+      <div className="hero__overlay" />
+
+      <div className="container hero__content">
+
+        {/* LEFT */}
+        <div className="hero__left">
+          <h1>
+            Поддержка сайтов<br />на Drupal
           </h1>
-          <p className="hero-subtitle">
+
+          <p className="hero__desc">
             Сопровождение и поддержка сайтов<br />
-            на CMS Drupal любых версий и запущенности
+            на CMS Drupal любых версий<br />
+            и любой степени запущенности
           </p>
-          <button className="btn btn-primary hero-cta">Тарифы</button>
+
+          <a href="#pricing" className="hero__button">Тарифы</a>
         </div>
-        
-        <div className="hero-stats">
-          <div className="stat-item">
-            {stats[0].icon && (
-              <img src={stats[0].icon} alt="" className="stat-icon" />
-            )}
-            <div className="stat-value">{stats[0].value}</div>
-            <div className="stat-label">{stats[0].label}</div>
-            <div className="stat-divider"></div>
+
+        {/* RIGHT */}
+        <div className="hero__stats">
+
+          <div className="stat stat--main">
+            <b>#1</b>
+            <img src="/images/trophy-icon.png" alt="" />
+            
+            <span>
+              Drupal-разработчик<br />
+              в России по версии<br />
+              Рейтинга Рунета
+            </span>
           </div>
-          <div className="stat-item">
-            <div className="stat-value">{stats[1].value}</div>
-            <div className="stat-label">{stats[1].label}</div>
-            <div className="stat-divider"></div>
+
+          <div className="stat">
+            <b>3+</b>
+            <span>
+              средний опыт<br />
+              специалистов более 3 лет
+            </span>
           </div>
-          <div className="stat-item">
-            <div className="stat-value">{stats[2].value}</div>
-            <div className="stat-label">{stats[2].label}</div>
+
+          <div className="stat">
+            <b>14</b>
+            <span>
+              лет опыта<br />
+              в сфере Drupal
+            </span>
           </div>
-        </div>
-        
-        <div className="hero-stats hero-stats-second">
-          <div className="stat-item">
-            <div className="stat-value">{stats[3].value}</div>
-            <div className="stat-label">{stats[3].label}</div>
-            <div className="stat-divider"></div>
+
+          <div className="stat">
+            <b>200+</b>
+            <span>
+              модулей и тем<br />
+              в формате DrupalGive
+            </span>
           </div>
-          <div className="stat-item">
-            <div className="stat-value">{stats[4].value}</div>
-            <div className="stat-label">{stats[4].label}</div>
-            <div className="stat-divider"></div>
+
+          <div className="stat">
+            <b>35&nbsp;000</b>
+            <span>
+              часов поддержки<br />
+              сайтов на Drupal
+            </span>
           </div>
-          <div className="stat-item">
-            <div className="stat-value">{stats[5].value}</div>
-            <div className="stat-label">{stats[5].label}</div>
+
+          <div className="stat">
+            <b>200+</b>
+            <span>
+              проектов<br />
+              на поддержке
+            </span>
           </div>
+
         </div>
       </div>
     </section>
   );
-};
-
-export default HeroSection;
+}
