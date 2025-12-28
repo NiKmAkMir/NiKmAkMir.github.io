@@ -1,60 +1,69 @@
+import React from 'react';
 import './ExperienceSection.css';
 
 const ExperienceSection = () => {
   const services = [
     {
-      icon: '/icons/service-add-info.svg',
+      id: 1,
+      icon: '/icons/1.svg',
       title: 'Добавление информации на сайт, создание новых разделов'
     },
     {
-      icon: '/icons/service-crm.svg',
-      title: 'Разработка и оптимизация модулей сайта',
-      badge: 'CRM'
+      id: 2,
+      icon: '/icons/2.svg',
+      title: 'Разработка и оптимизация модулей сайта'
     },
     {
-      icon: '/icons/service-code.svg',
+      id: 3,
+      icon: '/icons/3.svg',
       title: 'Интеграция с CRM, 1C, платежными системами, любыми веб-сервисами'
     },
     {
-      icon: '/icons/service-custom.svg',
+      id: 4,
+      icon: '/icons/4.svg',
       title: 'Любые доработки функционала и дизайна'
     },
     {
-      icon: '/icons/service-audit.svg',
+      id: 5,
+      icon: '/icons/5.svg',
       title: 'Аудит и мониторинг безопасности Drupal сайтов'
     },
     {
-      icon: '/icons/service-migration.svg',
+      id: 6,
+      icon: '/icons/6.svg',
       title: 'Миграция, импорт контента и апгрейд Drupal'
     },
     {
-      icon: '/icons/service-optimization.svg',
+      id: 7,
+      icon: '/icons/7.svg',
       title: 'Оптимизация и ускорение Drupal-сайтов'
     },
     {
-      icon: '/icons/service-seo.svg',
+      id: 8,
+      icon: '/icons/8.svg',
       title: 'Веб-маркетинг, консультации и работы по SEO'
     }
   ];
 
   return (
-    <section className="experience section">
+    <section className="experience">
       <div className="container">
-        <h2 className="heading-secondary experience-title">
-          13 лет совершенствуем<br />компетенции в Drupal<br />поддержке!
-        </h2>
-        <p className="text-body experience-description">
-          Разрабатываем и оптимизируем модули, расширяем функциональность сайтов, обновляем дизайн
-        </p>
+        <div className="experience-header">
+          <h2 className="experience-title">
+            13 лет совершенствуем<br />компетенции в Drupal<br />поддержке!
+          </h2>
+          <p className="experience-description">
+            Разрабатываем и оптимизируем модули, расширяем функциональность сайтов, обновляем дизайн
+          </p>
+        </div>
         
         <div className="services-grid">
-          {services.map((service, index) => (
-            <div key={index} className="service-item">
+          {services.map((service) => (
+            <div key={service.id} className="service-item">
               <div className="service-icon-wrapper">
-                <img src={service.icon} alt="" className="service-icon" />
-                {service.badge && <span className="service-badge">{service.badge}</span>}
+                <img src={service.icon} alt={service.title} className="service-icon" />
               </div>
-              <p className="service-title">{service.title}</p>
+              <p className="experience-description">{service.title}</p>
             </div>
           ))}
         </div>
