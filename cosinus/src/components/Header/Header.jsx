@@ -1,6 +1,13 @@
+import { useState } from 'react';
 import './Header.css';
 
 export default function Header() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
     <header className="header">
       <div className="container header__inner">
@@ -9,12 +16,21 @@ export default function Header() {
           <img src="/drupal-coder.svg" alt="Drupal-coder" />
         </div>
 
-        <nav className="header__nav">
-          <a className="active" href="#support">Поддержка сайтов</a>
-          <a href="#pricing">Тарифы</a>
-          <a href="#cases">Наши работы</a>
-          <a href="#reviews">Отзывы</a>
-          <a href="#contacts">Контакты</a>
+        <button 
+          className={`header__burger ${isNavOpen ? 'active' : ''}`} 
+          onClick={toggleNav}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        <nav className={`header__nav ${isNavOpen ? 'open' : ''}`}>
+          <a className="active" href="#support" onClick={() => setIsNavOpen(false)}>Поддержка сайтов</a>
+          <a href="#pricing" onClick={() => setIsNavOpen(false)}>Тарифы</a>
+          <a href="#cases" onClick={() => setIsNavOpen(false)}>Наши работы</a>
+          <a href="#reviews" onClick={() => setIsNavOpen(false)}>Отзывы</a>
+          <a href="#contacts" onClick={() => setIsNavOpen(false)}>Контакты</a>
         </nav>
 
         <div className="header__right">

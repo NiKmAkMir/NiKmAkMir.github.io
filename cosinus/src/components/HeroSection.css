@@ -1,11 +1,11 @@
 .hero {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
+  padding-bottom: 80px;
 }
 
-/* VIDEO */
 .hero__video {
   position: absolute;
   inset: 0;
@@ -20,51 +20,54 @@
   background: rgba(0, 0, 0, 0.65);
 }
 
-/* CONTENT */
 .hero__content {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 593px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  align-content: center;
   height: 100%;
-  gap: 80px;
+  gap: 40px;
+  padding-top: 80px;
 }
 
-/* LEFT */
 .hero__left h1 {
-  font-size: 52px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.2;
 }
 
 .hero__desc {
   margin-top: 20px;
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .hero__button {
   display: inline-block;
-  margin-top: 28px;
-  padding: 14px 36px;
+  text-align: center;
+  width: 100%;
+  max-width: 220px;
+  padding: 18px 0;
+  margin-top: 30px;
   border: 2px solid #ff3b2f;
   color: #fff;
+  font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
-/* STATS */
 .hero__stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 32px;
-  row-gap: 40px;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 30px;
 }
 
 .stat {
   position: relative;
-  padding-left: 16px;
+  padding-left: 12px;
 }
 
 .stat::before {
@@ -73,38 +76,119 @@
   left: 0;
   top: 4px;
   width: 2px;
-  height: 80px;
+  height: 100%;
+  max-height: 80px;
   background: #ff3b2f;
 }
 
+.stat--main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stat__top-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.stat__top-row b {
+  line-height: 1;
+  margin: 0;
+  font-size: 42px;
+}
+
 .stat img {
-  width: 58px;
-  height: 59px;
+  width: 48px;
+  height: auto;
   margin-bottom: 6px;
 }
 
-/* Первая карточка */
-.stat--main b {
-  font-size: 48px;
-  line-height: 1;
-}
-
-/* Остальные карточки */
-.stat:not(.stat--main) b {
-  font-size: 24px;
+.stat b {
+  font-size: 20px;
   line-height: 1.2;
+  display: block;
 }
-
 
 .stat span {
   font-size: 12px;
-  line-height: 1.45;
+  line-height: 1.4;
   display: block;
-  margin-top: 8px;
-}
-.stat--main img {
-  width: 59px;
-  height: 58px;
-  margin: 8px 0;
 }
 
+@media (min-width: 1124px) {
+  .hero {
+    height: 100vh;
+    padding-bottom: 0;
+  }
+
+  .hero__content {
+    grid-template-columns: 1fr 593px;
+    align-items: center;
+    gap: 80px;
+    padding-top: 0;
+  }
+
+  .hero__left h1 {
+    font-size: 52px;
+    line-height: 1.15;
+  }
+
+  .hero__desc {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .hero__button {
+    width: 220px;
+    padding: 20px 0 24px 0;
+    margin-top: 28px;
+  }
+
+  .hero__stats {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 32px;
+    row-gap: 40px;
+  }
+
+  .stat {
+    padding-left: 16px;
+  }
+  
+  .stat::before {
+    height: 80px;
+  }
+
+  .stat--main {
+    justify-content: flex-start;
+    padding-top: 0;
+  }
+
+  .stat__top-row {
+    margin-bottom: 15px;
+    margin-top: -35px;
+  }
+
+  .stat--main b {
+    font-size: 48px;
+    line-height: 1;
+  }
+  
+  .stat img {
+    width: 58px;
+    height: 59px;
+  }
+
+  .stat:not(.stat--main) b {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .stat span {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+}
