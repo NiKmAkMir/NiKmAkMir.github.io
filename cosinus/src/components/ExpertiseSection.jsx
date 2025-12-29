@@ -1,3 +1,4 @@
+import React from 'react';
 import './ExpertiseSection.css';
 
 const ExpertiseSection = () => {
@@ -7,12 +8,13 @@ const ExpertiseSection = () => {
         <div className="expertise-content">
           <div className="expertise-left">
             <div className="dashboard-mockup">
-              <img src="/images/dashboard-avatar.png" alt="Dashboard" className="dashboard-image" />
+              {/* Используем изображение ноутбука целиком */}
+              <img src="/icons/Group.svg" alt="Dashboard Interface" className="dashboard-image" />
             </div>
           </div>
           
           <div className="expertise-right">
-            <h2 className="heading-secondary expertise-title">
+            <h2 className="expertise-title">
               Экспертиза в Drupal,<br />опыт 14 лет!
             </h2>
             

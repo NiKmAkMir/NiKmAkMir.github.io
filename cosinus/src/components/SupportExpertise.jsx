@@ -1,7 +1,7 @@
 import React from 'react';
-import './SupportSection.css';
+import './SupportExpertise.css';
 
-const SupportSection = () => {
+const SupportExpertise = () => {
   const features = [
     {
       number: '01.',
@@ -54,26 +54,59 @@ const SupportSection = () => {
   ];
 
   return (
-    <section className="support">
-      <div className="container">
-        <h2 className="support-title">
-          Поддержка<br />от Drupal-coder
-        </h2>
-        
-        <div className="support-grid">
-          {features.map((feature, index) => (
-            <div key={index} className="support-card">
-              <div className="support-number">{feature.number}</div>
-              <h3 className="support-card-title">{feature.title}</h3>
-              <p className="support-card-description">{feature.description}</p>
-              {/* Если это SVG, они будут позиционированы в углу */}
-              <img src={feature.icon} alt="" className="support-card-icon" />
-            </div>
-          ))}
+    <div className="se-wrapper">
+      <section className="se-top">
+        <div className="container">
+          <h2 className="se-title">
+            Поддержка<br />от Drupal-coder
+          </h2>
+          
+          <div className="se-grid">
+            {features.map((feature, index) => (
+              <div key={index} className="se-card">
+                <div className="se-card-content">
+                  <div className="se-number">{feature.number}</div>
+                  <h3 className="se-card-title">{feature.title}</h3>
+                  <p className="se-card-description">{feature.description}</p>
+                </div>
+                <img src={feature.icon} alt="" className="se-card-icon" />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className="se-bottom">
+        <div className="se-notebook-wrapper">
+           <img src="/icons/Group.svg" alt="Dashboard Interface" className="se-notebook-img" />
+           <div className="se-notebook-shadow"></div>
+        </div>
+
+        <div className="container">
+          <div className="se-bottom-content">
+            <div className="se-bottom-spacer"></div>
+            
+            <div className="se-bottom-text">
+              <h2 className="se-bottom-title">
+                Экспертиза в Drupal,<br />опыт 14 лет!
+              </h2>
+              
+              <div className="se-points">
+                <div className="se-point">
+                  <div className="se-divider"></div>
+                  <p>Только системный подход – контроль версий, резервирование и тестирование!</p>
+                </div>
+                <div className="se-point">
+                  <div className="se-divider"></div>
+                  <p>Только Drupal сайты, не берем на поддержку сайты на других CMS!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
-export default SupportSection;
+export default SupportExpertise;

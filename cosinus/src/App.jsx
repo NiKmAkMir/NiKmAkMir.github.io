@@ -1,8 +1,7 @@
 import Header from './components/Header/Header';
 import HeroSection from './components/HeroSection';
 import ExperienceSection from './components/ExperienceSection';
-import SupportSection from './components/SupportSection';
-import ExpertiseSection from './components/ExpertiseSection';
+import SupportExpertise from './components/SupportExpertise';
 import PricingSection from './components/PricingSection';
 import CasesSection from './components/CasesSection';
 import TeamSection from './components/TeamSection';
@@ -18,8 +17,7 @@ function App() {
       <main>
         <HeroSection />
         <ExperienceSection />
-        <SupportSection />
-        <ExpertiseSection />
+        <SupportExpertise />
         <PricingSection />
         <CasesSection />
         <TeamSection />
