@@ -21,6 +21,7 @@
   grid-template-columns: 482px 1fr;
   gap: 120px;
   margin-bottom: 80px;
+  
 }
 
 .contact-title {
@@ -38,13 +39,14 @@
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: 6px;
+  margin-top: 100px;
 }
 
 .contact-info-item {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
+  gap: 12px;
 }
 
 .contact-icon {
@@ -172,8 +174,8 @@
 }
 .contact-logo1 {
   position: absolute;
-  bottom: 689px;
-  right: 675px;
+  bottom: 679px;
+  right: 665px;
   /* left: 153px;
   top: 171px; */
   width: 245px;
