@@ -1,30 +1,44 @@
 import './PartnersSection.css';
 
-const PartnersSection = () => {
-  const partners = [
-    '/images/partner-rosatom.png',
-    '/images/partner-logo-2.png',
-    '/images/partner-gazprom.png',
-    '/images/partner-vtb.png',
-    '/images/partner-logo-2.png',
-    '/images/partner-rosatom.png',
-    '/images/partner-vtb.png',
-    '/images/partner-logo-2.png',
-    '/images/partner-vtb.png'
-  ];
+const logos = [
+  '/images/partner-rosatom.png',
+  '/images/partner-logo-2.png',
+  '/images/partner-gazprom.png',
+  '/images/partner-vtb.png',
+  '/images/partner-logo-2.png',
+];
 
+const PartnersSection = () => {
   return (
-    <section className="partners section">
+    <section className="partners">
       <div className="container">
-        <h2 className="heading-secondary partners-title">С нами работают</h2>
+        <h2 className="heading-secondary partners-title">
+          С нами работают
+        </h2>
+
         <p className="partners-description">
-          Десятки компаний доверяют нам самое ценное, что у них есть в интернете – свои сайты. Мы делаем всё, чтобы наше сотрудничество было долгим.
+          Десятки компаний доверяют нам самое ценное, что у них есть в интернете — свои сайты.
+          Мы делаем все, чтобы наше сотрудничество было долгим.
         </p>
-        
-        <div className="partners-grid">
-          {partners.map((logo, index) => (
-            <div key={index} className="partner-logo">
-              <img src={logo} alt={`Partner ${index + 1}`} />
+      </div>
+
+      {/* Верхняя лента */}
+      <div className="partners-marquee">
+        <div className="partners-track track-left">
+          {[...logos, ...logos].map((logo, index) => (
+            <div className="partner-card" key={`top-${index}`}>
+              <img src={logo} alt="" />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Нижняя лента */}
+      <div className="partners-marquee second">
+        <div className="partners-track track-right">
+          {[...logos, ...logos].map((logo, index) => (
+            <div className="partner-card" key={`bottom-${index}`}>
+              <img src={logo} alt="" />
             </div>
           ))}
         </div>

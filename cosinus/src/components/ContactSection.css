@@ -1,6 +1,6 @@
 .contact {
   position: relative;
-  background: linear-gradient(261.2deg, rgba(255,255,255,0.28) 114.85%, rgba(255,255,255,0) 69.04%), #040613;
+  background: #040613;
   color: var(--color-white);
   padding: 117px 0 80px;
   overflow: hidden;
@@ -21,6 +21,7 @@
   grid-template-columns: 482px 1fr;
   gap: 120px;
   margin-bottom: 80px;
+  
 }
 
 .contact-title {
@@ -38,18 +39,23 @@
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: 6px;
+  margin-top: 100px;
 }
 
 .contact-info-item {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
+  gap: 12px;
 }
 
 .contact-icon {
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
+}
+.contact-icon2{
+  width: 28px;
+  height: 24px;
 }
 
 .contact-phone {
@@ -139,7 +145,7 @@
 
 .form-submit {
   width: 100%;
-  max-width: 300px;
+  /* max-width: 300px; */
   margin-left: auto;
 }
 
@@ -154,6 +160,7 @@
   font-weight: 400;
   opacity: 0.5;
   margin-bottom: 8px;
+  text-align: left;
 }
 
 .contact-logo {
@@ -164,6 +171,18 @@
   height: auto;
   opacity: 0.8;
   pointer-events: none;
+}
+.contact-logo1 {
+  position: absolute;
+  bottom: 679px;
+  right: 665px;
+  /* left: 153px;
+  top: 171px; */
+  width: 245px;
+  height: auto;
+  opacity: 0.8;
+  pointer-events: none;
+  /* transform: rotate(-5deg); */
 }
 
 @media (max-width: 1024px) {

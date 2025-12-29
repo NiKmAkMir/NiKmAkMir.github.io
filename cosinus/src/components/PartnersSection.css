@@ -1,62 +1,94 @@
 .partners {
-  background-color: var(--color-white);
+  background: #ffffff;
+  overflow: hidden;
+  padding: 80px 0 100px;
 }
 
+/* Заголовок */
 .partners-title {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
+/* Описание */
 .partners-description {
   text-align: center;
+  max-width: 740px;
+  margin: 0 auto 60px;
   font-size: 16px;
-  font-weight: 500;
   line-height: 22px;
   color: var(--color-text-secondary);
-  max-width: 742px;
-  margin: 0 auto 60px;
 }
 
-.partners-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+/* Общий контейнер ленты */
+.partners-marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Отступ между лентами */
+.partners-marquee.second {
+  margin-top: 30px;
+}
+
+/* Движущаяся дорожка */
+.partners-track {
+  display: flex;
   gap: 40px;
-  align-items: center;
+  width: max-content;
 }
 
-.partner-logo {
+/* Направления */
+.track-left {
+  animation: marquee-left 25s linear infinite;
+}
+
+.track-right {
+  animation: marquee-right 30s linear infinite;
+}
+
+/* Карточка логотипа */
+.partner-card {
+  width: 240px;
+  height: 120px;
+  background: #fff;
+  border-radius: 8px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  transition: transform 0.3s ease;
+
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
 }
 
-.partner-logo:hover {
-  transform: scale(1.1);
-}
-
-.partner-logo img {
-  max-width: 150px;
-  max-height: 100px;
-  width: auto;
-  height: auto;
+/* Логотип */
+.partner-card img {
+  max-width: 160px;
+  max-height: 80px;
   opacity: 0.7;
   transition: opacity 0.3s ease;
 }
 
-.partner-logo:hover img {
+.partner-card:hover img {
   opacity: 1;
 }
 
-@media (max-width: 1024px) {
-  .partners-grid {
-    grid-template-columns: repeat(3, 1fr);
+/* Анимации */
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
-@media (max-width: 640px) {
-  .partners-grid {
-    grid-template-columns: repeat(2, 1fr);
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
