@@ -1,19 +1,20 @@
+
 import { useState } from 'react';
 import './TestimonialsSection.css';
-
+const base = import.meta.env.BASE_URL
 const testimonials = [
   {
-    logo: '/images/winamp-logo.png',
+    logo: `${base}images/winamp-logo.png`,
     text: 'Команда Drupal Coder вызвала только положительные впечатления!',
     author: 'Нуреев Александр, менеджер проекта Winamp Russian Community',
   },
   {
-    logo: '/images/winamp-logo.png',
+    logo: `${base}images/winamp-logo.png`,
     text: 'Отличная коммуникация и высокий уровень экспертизы.',
     author: 'Иван Петров, CTO',
   },
   {
-    logo: '/images/winamp-logo.png',
+    logo: `${base}images/winamp-logo.png`,
     text: 'Работа выполнена в срок, результатом довольны.',
     author: 'Анна Смирнова, Project Manager',
   },

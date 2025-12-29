@@ -1,34 +1,34 @@
 import './TeamSection.css';
-
+const base = import.meta.env.BASE_URL
 const TeamSection = () => {
   const team = [
     {
-      photo: '/images/team-lesha.png',
+      photo: `${base}images/team-lesha.png`,
       name: 'Лёша',
       role: 'руководитель поддержки, планирование задач'
     },
     {
-      photo: '/images/team-roman.png',
+      photo: `${base}images/team-roman.png`,
       name: 'Роман',
       role: 'инфраструктура веб-проектов'
     },
     {
-      photo: '/images/team-dasha.png',
+      photo: `${base}images/team-dasha.png`,
       name: 'Ирина',
       role: 'менеджер по работе с клинетами, организация оказания услуг'
     },
     {
-      photo: '/images/team-dasha.png',
+      photo: `${base}images/team-dasha.png`,
       name: 'Даша',
       role: 'SEO, веб-маркетинг'
     },
     {
-      photo: '/images/team-lesha.png',
+      photo: `${base}images/team-lesha.png`,
       name: 'Сергей',
       role: 'технический директор, 14 лет опыт работы с Drupal'
     },
     {
-      photo: '/images/team-roman.png',
+      photo: `${base}images/team-roman.png`,
       name: 'Вадим',
       role: 'UX/UI дизайн'
     }
