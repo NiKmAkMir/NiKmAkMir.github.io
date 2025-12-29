@@ -1,46 +1,47 @@
 import React from 'react';
 import './ExperienceSection.css';
+const base = import.meta.env.BASE_URL
 
 const ExperienceSection = () => {
   const services = [
     {
       id: 1,
-      icon: '/icons/1.svg',
+      icon: `${base}icons/1.svg`,
       title: 'Добавление информации на сайт, создание новых разделов'
     },
     {
       id: 2,
-      icon: '/icons/2.svg',
+      icon: `${base}icons/2.svg`,
       title: 'Разработка и оптимизация модулей сайта'
     },
     {
       id: 3,
-      icon: '/icons/3.svg',
+      icon: `${base}icons/3.svg`,
       title: 'Интеграция с CRM, 1C, платежными системами, любыми веб-сервисами'
     },
     {
       id: 4,
-      icon: '/icons/4.svg',
+      icon: `${base}icons/4.svg`,
       title: 'Любые доработки функционала и дизайна'
     },
     {
       id: 5,
-      icon: '/icons/5.svg',
+      icon: `${base}icons/5.svg`,
       title: 'Аудит и мониторинг безопасности Drupal сайтов'
     },
     {
       id: 6,
-      icon: '/icons/6.svg',
+      icon: `${base}icons/6.svg`,
       title: 'Миграция, импорт контента и апгрейд Drupal'
     },
     {
       id: 7,
-      icon: '/icons/7.svg',
+      icon: `${base}icons/7.svg`,
       title: 'Оптимизация и ускорение Drupal-сайтов'
     },
     {
       id: 8,
-      icon: '/icons/8.svg',
+      icon: `${base}icons/8.svg`,
       title: 'Веб-маркетинг, консультации и работы по SEO'
     }
   ];

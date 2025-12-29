@@ -1,5 +1,6 @@
 import React from 'react';
 import './ContactSection.css';
+const base = import.meta.env.BASE_URL
 
 const FeedbackModal = ({ 
   isOpen, 
@@ -68,7 +69,7 @@ const FeedbackModal = ({
               onChange={onChange}
               required 
             />
-            <img src="/icons/checkbox-checked.svg" alt="" className="checkbox-icon" />
+            <img src={`${base}icons/checkbox-checked.svg`} alt="" className="checkbox-icon" />
             <span>Я даю согласие на обработку персональных данных</span>
           </label>
           

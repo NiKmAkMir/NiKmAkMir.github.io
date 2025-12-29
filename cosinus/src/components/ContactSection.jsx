@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './ContactSection.css';
 import FeedbackModal from './FeedbackModal';
 
-const FORM_ENDPOINT = "https://formcarry.com/s/ВАШ_ID"; 
+const FORM_ENDPOINT = "https://formcarry.com/s/NrOjFi_gd9P"; 
+const base = import.meta.env.BASE_URL
 
 const ContactSection = () => {
   // 1. Единое хранилище данных для футера и попапа
@@ -109,18 +110,18 @@ const ContactSection = () => {
               <h2 className="heading-secondary contact-title">
                 Оставить заявку на<br />поддержку сайта
               </h2>
-              <img src="/images/d-flying-logo.svg" alt="" className="contact-logo1" />
+              <img src={`${base}images/d-flying-logo.svg`} alt="" className="contact-logo1" />
               <p className="contact-description">
                 Срочно нужна поддержка сайта? Просто оставьте заявку!
               </p>
               
               <div className="contact-info">
                 <div className="contact-info-item">
-                  <img src="icons/phone.svg" alt="" className="contact-icon" />
+                  <img src={`${base}icons/phone.svg`} alt="" className="contact-icon" />
                   <a href="tel:88002222673" className="contact-phone">8 800 222-26-73</a>
                 </div>
                 <div className="contact-info-item">
-                  <img src="/icons/mail.svg" alt="" className="contact-icon2" />
+                  <img src={`${base}icons/mail.svg`} alt="" className="contact-icon2" />
                   <a href="mailto:info@drupal-coder.ru" className="contact-email">info@drupal-coder.ru</a>
                 </div>
               </div>
@@ -167,7 +168,7 @@ const ContactSection = () => {
 Drupal является зарегистрированной торговой маркой Dries Buytaert.</p>
           </div>
         </div>
-        <img src="/images/d-logo-footer.svg" alt="" className="contact-logo" />
+        <img src={`${base}images/d-logo-footer.svg`} alt="" className="contact-logo" />
       </section>
 
       {/* МОДАЛКА - получает все данные и управление */}

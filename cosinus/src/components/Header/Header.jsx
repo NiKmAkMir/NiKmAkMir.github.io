@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Header.css';
+const base = import.meta.env.BASE_URL
 
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -13,7 +14,7 @@ export default function Header() {
       <div className="container header__inner">
 
         <div className="header__logo">
-          <img src="/drupal-coder.svg" alt="Drupal-coder" />
+          <img src={`${base}drupal-coder.svg`} alt="Drupal-coder" />
         </div>
 
         <button 
@@ -38,7 +39,7 @@ export default function Header() {
 
           <span className="header__lang">
             RU
-            <img src="/icons/arrow-lang.svg" alt="" />
+            <img src={`${base}icons/arrow-lang.svg`} alt="" />
           </span>
         </div>
 

@@ -1,11 +1,12 @@
 import './PartnersSection.css';
+const base = import.meta.env.BASE_URL
 
 const logos = [
-  '/images/partner-rosatom.png',
-  '/images/partner-logo-2.png',
-  '/images/partner-gazprom.png',
-  '/images/partner-vtb.png',
-  '/images/partner-logo-2.png',
+  `${base}images/partner-rosatom.png`,
+  `${base}images/partner-logo-2.png`,
+  `${base}images/partner-gazprom.png`,
+  `${base}images/partner-vtb.png`,
+  `${base}images/partner-logo-2.png`,
 ];
 
 const PartnersSection = () => {

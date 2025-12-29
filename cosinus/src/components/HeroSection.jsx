@@ -1,11 +1,12 @@
 import './HeroSection.css';
+const base = import.meta.env.BASE_URL
 
 export default function HeroSection() {
   return (
     <section className="hero">
 
       <video className="hero__video" autoPlay muted loop playsInline>
-        <source src="/video.mp4" type="video/mp4" />
+        <source src={`${base}video.mp4`} type="video/mp4" />
       </video>
 
       <div className="hero__overlay" />
@@ -31,7 +32,7 @@ export default function HeroSection() {
           <div className="stat stat--main">
             <div className="stat__top-row">
               <b>#1</b>
-              <img src="/images/trophy-icon.png" alt="" />
+              <img src={`${base}images/trophy-icon.png`} alt="" />
             </div>
                       
             <span style={{ marginTop: '-15px' }}>

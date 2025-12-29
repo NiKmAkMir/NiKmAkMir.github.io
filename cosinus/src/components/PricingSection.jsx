@@ -1,4 +1,5 @@
 import './PricingSection.css';
+const base = import.meta.env.BASE_URL
 
 const PricingSection = () => {
   const plans = [
@@ -64,7 +65,7 @@ const PricingSection = () => {
               <ul className="pricing-features">
                 {plan.features.map((feature, idx) => (
                   <li key={idx} className="pricing-feature">
-                    <img src="/icons/checkmark.svg" alt="" className="feature-check" />
+                    <img src={`${base}icons/checkmark.svg`} alt="" className="feature-check" />
                     <span>{feature}</span>
                   </li>
                 ))}
