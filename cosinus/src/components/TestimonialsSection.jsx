@@ -4,66 +4,94 @@ import './TestimonialsSection.css';
 const testimonials = [
   {
     logo: '/images/winamp-logo.png',
-    quote: 'Команда Drupal Coder вызвала только положительные впечатления!',
+    text: 'Команда Drupal Coder вызвала только положительные впечатления!',
     author: 'Нуреев Александр, менеджер проекта Winamp Russian Community',
   },
   {
     logo: '/images/winamp-logo.png',
-    quote: 'Отличная коммуникация и высокий уровень экспертизы.',
-    author: 'Иван Петров, руководитель IT-направления',
+    text: 'Отличная коммуникация и высокий уровень экспертизы.',
+    author: 'Иван Петров, CTO',
   },
   {
     logo: '/images/winamp-logo.png',
-    quote: 'Работа выполнена в срок и без лишних правок.',
-    author: 'Алексей Смирнов, CTO',
+    text: 'Работа выполнена в срок, результатом довольны.',
+    author: 'Анна Смирнова, Project Manager',
   },
-  // можешь добавлять сколько угодно
 ];
 
 const TestimonialsSection = () => {
-  const [current, setCurrent] = useState(0);
+  const [index, setIndex] = useState(0);
   const total = testimonials.length;
 
   const prev = () => {
-    setCurrent((prev) => (prev === 0 ? total - 1 : prev - 1));
+    setIndex((prev) => (prev - 1 + total) % total);
   };
 
   const next = () => {
-    setCurrent((prev) => (prev === total - 1 ? 0 : prev + 1));
+    setIndex((prev) => (prev + 1) % total);
   };
 
-  const { logo, quote, author } = testimonials[current];
+  const current = testimonials[index];
 
   return (
-    <section id="testimonials" className="testimonials section">
-      <div className="container">
+    <section className="testimonials section">
+      <div className="container testimonials-wrapper">
+
+        {/* Декор слева (кавычка + прямоугольник) */}
+        <img
+          src="/icons/right-quote-sign.svg"
+          alt=""
+          className="testimonial-decor quote"
+        />
+        <img
+          src="/icons/Rectangle 3.1.png"
+          alt=""
+          className="testimonial-decor rect-left"
+        />
+
+        {/* Декор справа */}
+        <img
+          src="/icons/Rectangle 3.2.png"
+          alt=""
+          className="testimonial-decor rect-right"
+        />
+
         <h2 className="heading-secondary testimonials-title">Отзывы</h2>
 
         <div className="testimonial-card">
-          <img src={logo} alt="" className="testimonial-logo" />
+          <div className="testimonial-content">
+            <div className="testimonial-left">
+              <img
+                src={current.logo}
+                alt="logo"
+                className="testimonial-logo"
+              />
 
-          <h3 className="testimonial-quote">
-            {quote}
-          </h3>
+              <h3 className="testimonial-quote">
+                {current.text}
+              </h3>
 
-          <p className="testimonial-author">
-            {author}
-          </p>
+              <p className="testimonial-author">
+                {current.author}
+              </p>
+            </div>
 
-          <div className="testimonial-nav">
-            <button className="nav-arrow" onClick={prev}>
-              <img src="/icons/arrow-left.svg" alt="Previous" />
-            </button>
+            <div className="testimonial-right">
+              <button className="nav-arrow" onClick={prev}>
+                ‹
+              </button>
 
-            <span className="nav-counter">
-              {String(current + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
-            </span>
+              <span className="nav-counter">
+                {String(index + 1).padStart(2, '0')} / {String(total).padStart(2, '0')}
+              </span>
 
-            <button className="nav-arrow" onClick={next}>
-              <img src="/icons/arrow-right.svg" alt="Next" />
-            </button>
+              <button className="nav-arrow" onClick={next}>
+                ›
+              </button>
+            </div>
           </div>
         </div>
+
       </div>
     </section>
   );
