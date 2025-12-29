@@ -1,5 +1,6 @@
 import React from 'react';
 import './SupportSection.css';
+const base = import.meta.env.BASE_URL
 
 const SupportSection = () => {
   const features = [
@@ -7,49 +8,49 @@ const SupportSection = () => {
       number: '01.',
       title: 'Постановка задачи по Email',
       description: 'Удобная и привычная модель постановки задач, при которой задачи фиксируются и никогда не теряются.',
-      icon: '/icons/support-email.svg'
+      icon: `${base}icons/support-email.svg`
     },
     {
       number: '02.',
       title: 'Система Helpdesk – отчетность, прозрачность',
       description: 'Возможность посмотреть все заявки в работе и отработанные часы в личном кабинете через браузер.',
-      icon: '/icons/support-helpdesk.svg'
+      icon: `${base}icons/support-helpdesk.svg`
     },
     {
       number: '03.',
       title: 'Расширенная техническая поддержка',
       description: 'Возможность организации расширенной техподдержки с 6:00 до 22:00 без выходных.',
-      icon: '/icons/support-technical.svg'
+      icon: `${base}icons/support-technical.svg`
     },
     {
       number: '04.',
       title: 'Персональный менеджер проекта',
       description: 'Ваш менеджер проекта всегда в курсе текущего состояния проекта и в любой момент готов ответить на любые вопросы.',
-      icon: '/icons/support-manager.svg'
+      icon: `${base}icons/support-manager.svg`
     },
     {
       number: '05.',
       title: 'Удобные способы оплаты',
       description: 'Безналичный расчет по договору или электронные деньги: WebMoney, Яндекс.Деньги, Paypal.',
-      icon: '/icons/support-payment.svg'
+      icon: `${base}icons/support-payment.svg`
     },
     {
       number: '06.',
       title: 'Работаем с SLA и NDA',
       description: 'Работа в рамках соглашений о конфиденциальности и об уровне качества работ.',
-      icon: '/icons/support-sla.svg'
+      icon: `${base}icons/support-sla.svg`
     },
     {
       number: '07.',
       title: 'Штатные специалисты',
       description: 'Надежные штатные специалисты, никаких фрилансеров.',
-      icon: '/icons/support-team.svg'
+      icon: `${base}icons/support-team.svg`
     },
     {
       number: '08.',
       title: 'Удобные каналы связи',
       description: 'Консультации по телефону, скайпу, в мессенджерах.',
-      icon: '/icons/support-communication.svg'
+      icon: `${base}icons/support-communication.svg`
     }
   ];
 
