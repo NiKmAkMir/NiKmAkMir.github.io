@@ -103,10 +103,14 @@
 }
 
 .testimonial-decor.rect-left {
-  left: -80px;
-  top: 320px;
-  width: 300px;
+  /* left: 230px;
+  top: 129px; */
+  width: 852px;
+  height: 457px;
   opacity: 0.4;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .testimonial-decor.rect-right {
