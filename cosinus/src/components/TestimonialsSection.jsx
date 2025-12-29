@@ -38,8 +38,8 @@ const TestimonialsSection = () => {
       <div className="container testimonials-wrapper">
 
         {/* Декор слева (кавычка + прямоугольник) */}
-        <img
-          src="/icons/right-quote-sign.svg"
+        {/* <img
+          src="icons/right-quote-sign.svg"
           alt=""
           className="testimonial-decor quote"
         />
@@ -47,14 +47,14 @@ const TestimonialsSection = () => {
           src="/icons/Rectangle 3.1.png"
           alt=""
           className="testimonial-decor rect-left"
-        />
+        /> */}
 
         {/* Декор справа */}
-        <img
+        {/* <img
           src="/icons/Rectangle 3.2.png"
           alt=""
           className="testimonial-decor rect-right"
-        />
+        /> */}
 
         <h2 className="heading-secondary testimonials-title">Отзывы</h2>
 
