@@ -1,6 +1,6 @@
 <?php
 $user = 'geontar';
-$pass = 'QhGwgmm6xS*s'; 
+$pass = '123456'; 
 $db_name = 'geontar';
 
 try {
