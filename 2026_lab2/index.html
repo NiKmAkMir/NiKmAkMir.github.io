@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отчет по лабораторной работе №2</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --accent: #f1f5f9;
+        }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 40px; padding: 30px; background: var(--card-bg); border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }
+        h1 { color: var(--primary); margin: 0; font-size: 1.8rem; letter-spacing: -0.025em; }
+        .task-card { background: var(--card-bg); border-radius: 16px; padding: 25px; margin-bottom: 30px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }
+        .task-num { display: inline-block; background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 700; margin-bottom: 12px; text-transform: uppercase; }
+        h2 { margin-top: 0; font-size: 1.25rem; color: #0f172a; padding-bottom: 12px; border-bottom: 1px solid #f1f5f9; }
+        
+        .result-box { background: var(--accent); border-left: 4px solid var(--primary); padding: 15px; margin: 15px 0; border-radius: 0 8px 8px 0; font-size: 0.95rem; }
+        .result-label { font-weight: 700; color: var(--primary); display: block; margin-bottom: 5px; text-transform: uppercase; font-size: 0.7rem; }
+        
+        .img-container { background: #0f172a; border-radius: 12px; overflow: hidden; border: 1px solid #334155; margin-top: 20px; }
+        img { width: 100%; display: block; transition: opacity 0.3s; }
+        img:hover { opacity: 0.9; cursor: pointer; }
+        footer { text-align: center; color: #64748b; font-size: 0.85rem; margin-top: 60px; padding-bottom: 40px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Отчет по лабораторной работе №2</h1>
+        <p>Курс: Программно-аппаратные средства Web</p>
+    </header>
+
+    <div id="report-content"></div>
+
+    <footer>
+        <p>Сформировано автоматически для учебного домена &copy; 2026</p>
+    </footer>
+</div>
+
+<script>
+    const taskTitles = [
+        "Получение главной страницы (GET, HTTP 1.0)",
+        "Получение внутренней страницы (GET, HTTP 1.1)",
+        "Определение размера файла file.tar.gz (HEAD)",
+        "Определение медиатипа ресурса /image.png (HEAD)",
+        "Отправка комментария на сервер (POST)",
+        "Получение части файла (заголовок Range)",
+        "Определение кодировки ресурса /index.php"
+    ];
+
+    const taskResults = [
+        "Сервер успешно вернул файл",
+        "Сервер вернул страницу index.php",
+        "Размер файла (Content-Length): 11335 байт.",
+        "Медиатип ресурса (Content-Type): image/png.",
+        "Запрос POST выполнен успешно. Данные comment=hello переданы корректно.",
+        "Получено ровно 100 байт данных. Статус ответа: 206 Partial Content.",
+        "Кодировка ресурса определена как UTF-8."
+    ];
+
+    const container = document.getElementById('report-content');
+
+    taskTitles.forEach((title, index) => {
+        const num = index + 1;
+        const resText = taskResults[index];
+        const card = document.createElement('div');
+        card.className = 'task-card';
+        
+        let resultHtml = resText ? `
+            <div class="result-box">
+                <span class="result-label">Результат анализа:</span>
+                ${resText}
+            </div>` : '';
+
+        card.innerHTML = `
+            <span class="task-num">Задание ${num}</span>
+            <h2>${title}</h2>
+            ${resultHtml}
+            <div class="img-container">
+                <img src="img/${num}.png" alt="Скриншот ${num}" onerror="this.src='https://via.placeholder.com/800x400/0f172a/ffffff?text=Файл+img/${num}.png+не+найден'">
+            </div>
+        `;
+        container.appendChild(card);
+    });
+</script>
+
+</body>
+</html>
