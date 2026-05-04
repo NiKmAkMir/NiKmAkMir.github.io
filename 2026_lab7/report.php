@@ -112,7 +112,7 @@ session_regenerate_id(true);</div>
 $stmt->execute([$fio, $phone, ...]);</div>
             </div>
         </div>
-        [cite_start]<div class="desc"><b>Результат:</b> Использование <b>Prepared Statements</b> (Подготовленных запросов) [cite: 23, 69] полностью исключает возможность внедрения кода в SQL-запрос, так как данные передаются отдельно от самой команды.</div>
+        <div class="desc"><b>Результат:</b> Использование <b>Prepared Statements</b> (Подготовленных запросов) полностью исключает возможность внедрения кода в SQL-запрос, так как данные передаются отдельно от самой команды.</div>
     </div>
 
     <div class="section">
@@ -123,9 +123,6 @@ header('X-Content-Type-Options: nosniff'); // Запрет браузеру уг
 header('X-XSS-Protection: 1; mode=block'); // Принудительный фильтр XSS</div>
     </div>
 
-    <p style="text-align: center; margin-top: 50px; color: var(--text-muted); font-size: 12px;">
-        Отчет сформирован для системы Moodle | Студент: geontar | 2025
-    </p>
 </div>
 
 </body>
